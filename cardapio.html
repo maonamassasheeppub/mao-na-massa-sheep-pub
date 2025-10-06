@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cardápio - Mão na Massa Sheep Pub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <img src="img/logo.png" alt="Logo Mão na Massa Sheep Pub" class="logo"/>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#menu">Cardápio</a></li>
+          <li><button class="btn-carrinho" onclick="abrirCarrinho()"><i class="fas fa-shopping-cart"></i> Carrinho</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="menu" class="menu-completo">
+    <div class="container">
+      <h2>Cardápio Completo</h2>
+      <p>Escolha os itens e clique em <strong>Adicionar</strong>. No carrinho clique em <strong>Finalizar Pedido</strong> para abrir o WhatsApp com a sua mensagem.</p>
+
+      <div class="menu-section">
+        <h3>Pizzas Salgadas — Tradicionais</h3>
+        <ul class="menu-list">
+          <li>
+            <div class="item-name">Calabresa</div>
+            <div class="item-desc">Molho de tomate, mussarela, calabresa e orégano</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Calabresa ', 65, 75)">Adicionar</button>
+            
+          </li>
+          <li>
+            <div class="item-name">Calabresa Acebolada</div>
+            <div class="item-desc">Molho de tomate, mussarela, calabresa, cebola e orégano</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Calabresa Acebolada  ', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Bacon</div>
+            <div class="item-desc">Molho de tomate, mussarela, bacon e orégano</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Bacon ', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Bacon com Cheddar</div>
+            <div class="item-desc">Molho de tomate, mussarela, bacon, cheddar e orégano</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Bacon com Cheddar  ', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Portuguesa</div>
+            <div class="item-desc">Molho de tomate, mussarela, ovo, azeitona, presunto, cebola e orégano</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Portuguesa ', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Frango c/ Catupiry</div>
+            <div class="item-desc">Molho de tomate, mussarela, frango desfiado, catupiry e orégano</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Frango c/ Catupiry  ', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Bacon c/ Milho</div>
+            <div class="item-desc">Molho de tomate, mussarela, bacon e milho verde</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Bacon c/ Milho', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Bacon c/ Batata Palha</div>
+            <div class="item-desc">Molho de tomate, mussarela, bacon e batata palha</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Bacon c/ Batata Palha', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Marguerita</div>
+            <div class="item-desc">Molho de tomate, mussarela, tomate em rodelas e manjericão</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Marguerita', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Vegetariana</div>
+            <div class="item-desc">Molho de tomate, mussarela, tomate, milho, palmito, champignon, parmesão e orégano</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Vegetariana', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">4 Queijos</div>
+            <div class="item-desc">Molho de tomate, mussarela, gorgonzola, parmesão, catupiry e orégano</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza 4 Queijos', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">5 Queijos</div>
+            <div class="item-desc">Molho de tomate, mussarela, gorgonzola, parmesão, catupiry, cheddar e orégano</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza 5 Queijos', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Carbonara</div>
+            <div class="item-desc">Molho de tomate, mussarela, bacon, ovo e orégano</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Carbonara', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Calabresa Milão</div>
+            <div class="item-desc">Molho de tomate, mussarela, calabresa, azeitona, cebola e orégano</div>
+            <div class="item-price">30cm R$ 65 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Calabresa Milão', 65, 75)">Adicionar</button>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Pizzas Salgadas — Sabores Especiais</h3>
+        <ul class="menu-list">
+          <li>
+            <div class="item-name">4 Queijos com Bacon</div>
+            <div class="item-desc">Molho de tomate, mussarela, bacon, provolone, gorgonzola e catupiry</div>
+            <div class="item-price">30cm R$ 70 | 40cm R$ 85</div>
+            <button onclick="adicionarCarrinho('Pizza 4 Queijos com Bacon', 70, 85)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">5 Queijos com Bacon</div>
+            <div class="item-desc">Molho de tomate, mussarela, bacon, provolone, gorgonzola, cheddar e catupiry</div>
+            <div class="item-price">30cm R$ 70 | 40cm R$ 85</div>
+            <button onclick="adicionarCarrinho('Pizza 5 Queijos com Bacon', 70, 85)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Lombinho</div>
+            <div class="item-desc">Molho de tomate, mussarela, lombinho, champignon, catupiry e orégano</div>
+            <div class="item-price">30cm R$ 70 | 40cm R$ 85</div>
+            <button onclick="adicionarCarrinho('Pizza Lombinho', 70, 85)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Moda do Chefe</div>
+            <div class="item-desc">Molho de tomate, mussarela, presunto, bacon, calabresa, milho, palmito, champignon, catupiry e orégano</div>
+            <div class="item-price">30cm R$ 70 | 40cm R$ 85</div>
+            <button onclick="adicionarCarrinho('Pizza Moda do Chefe', 70, 85)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Toscana Suprema</div>
+            <div class="item-desc">Alho e óleo, salame, tomate, catupiry e orégano</div>
+            <div class="item-price">30cm R$ 70 | 40cm R$ 85</div>
+            <button onclick="adicionarCarrinho('Pizza Toscana Suprema', 70, 85)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Bacon Suprema</div>
+            <div class="item-desc">Molho de tomate, mussarela, bacon, cebola, barbecue e orégano</div>
+            <div class="item-price">30cm R$ 70 | 40cm R$ 85</div>
+            <button onclick="adicionarCarrinho('Pizza Bacon Suprema', 70, 85)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Calabresa Suprema</div>
+            <div class="item-desc">Molho de tomate, mussarela, calabresa, cebola e barbecue</div>
+            <div class="item-price">30cm R$ 70 | 40cm R$ 85</div>
+            <button onclick="adicionarCarrinho('Pizza Calabresa Suprema', 70, 85)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Atum c/ Provolone</div>
+            <div class="item-desc">Molho de tomate, mussarela, atum, provolone e orégano</div>
+            <div class="item-price">30cm R$ 70 | 40cm R$ 85</div>
+            <button onclick="adicionarCarrinho('Pizza Atum c/ Provolone', 70, 85)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Provolone Especial</div>
+            <div class="item-desc">Molho de tomate, mussarela, bacon, provolone e orégano</div>
+            <div class="item-price">30cm R$ 70 | 40cm R$ 85</div>
+            <button onclick="adicionarCarrinho('Pizza Provolone Especial', 70, 85)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Strogonoff de Frango</div>
+            <div class="item-desc">Molho de tomate, mussarela, strogonoff de frango, batata palha e orégano</div>
+            <div class="item-price">30cm R$ 70 | 40cm R$ 85</div>
+            <button onclick="adicionarCarrinho('Pizza Strogonoff de Frango', 70, 85)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Camarão Crocante</div>
+            <div class="item-desc">Molho de tomate, mussarela, camarão crocante, cream cheese e orégano</div>
+            <div class="item-price">30cm R$ 129,90 | 40cm R$ 149,90</div>
+            <button onclick="adicionarCarrinho('Pizza Camarão Crocante', 129.90, 149.90)">Adicionar</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-section">
+        <h3>Especialidades (Costela / Alcatra / Mignon)</h3>
+        <ul class="menu-list">
+          <li>
+            <div class="item-name">Costela Suprema</div>
+            <div class="item-desc">Costela desfiada, cebola, barbecue e orégano</div>
+            <div class="item-price">Preço sob consulta</div>
+            <button onclick="adicionarComPrecoPrompt('Costela Suprema')">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Alcatra Suprema</div>
+            <div class="item-desc">Alcatra em tiras, cebola e orégano</div>
+            <div class="item-price">Preço sob consulta</div>
+            <button onclick="adicionarComPrecoPrompt('Alcatra Suprema')">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Alcatra c/ Catupiry</div>
+            <div class="item-desc">Alcatra em tiras e catupiry</div>
+            <div class="item-price">Preço sob consulta</div>
+            <button onclick="adicionarComPrecoPrompt('Alcatra c/ Catupiry')">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Lombo Havaiano</div>
+            <div class="item-desc">Lombinho, abacaxi, catupiry, champignon e orégano</div>
+            <div class="item-price">Preço sob consulta</div>
+            <button onclick="adicionarComPrecoPrompt('Lombo Havaiano')">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Strogonoff de Carne</div>
+            <div class="item-desc">Strogonoff de carne com batata palha</div>
+            <div class="item-price">Preço sob consulta</div>
+            <button onclick="adicionarComPrecoPrompt('Strogonoff de Carne')">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">5 Queijos c/ Mignon</div>
+            <div class="item-desc">Mignon, 5 queijos e catupiry</div>
+            <div class="item-price">Preço sob consulta</div>
+            <button onclick="adicionarComPrecoPrompt('5 Queijos c/ Mignon')">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">4 Queijos c/ Mignon</div>
+            <div class="item-desc">Mignon e 4 queijos</div>
+            <div class="item-price">Preço sob consulta</div>
+            <button onclick="adicionarComPrecoPrompt('4 Queijos c/ Mignon')">Adicionar</button>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Pizzas Doces — Tradicionais & Especiais</h3>
+        <ul class="menu-list">
+          <li>
+            <div class="item-name">Nutella c/ Banana</div>
+            <div class="item-desc">Mussarela, Nutella e banana</div>
+            <div class="item-price">30cm R$ 60 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Nutella c/ Banana', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Nutella c/ Abacaxi</div>
+            <div class="item-desc">Mussarela, Nutella e abacaxi</div>
+            <div class="item-price">30cm R$ 60 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Nutella c/ Abacaxi', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Kinder Bueno</div>
+            <div class="item-desc">Mussarela, Nutella e Kinder Bueno</div>
+            <div class="item-price">30cm R$ 60 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Kinder Bueno', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Prestígio</div>
+            <div class="item-desc">Mussarela, chocolate e coco</div>
+            <div class="item-price">30cm R$ 60 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Prestígio', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Sensação</div>
+            <div class="item-desc">Combinações com chocolate, morango, amendoim, etc.</div>
+            <div class="item-price">30cm R$ 60 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Sensação', 65, 75)">Adicionar</button>
+          </li>
+           <li>
+            <div class="item-name">Tentação</div>
+            <div class="item-desc">Combinações com chocolate, morango, amendoim, etc.</div>
+            <div class="item-price">30cm R$ 60 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Tentação', 65, 75)">Adicionar</button>
+          </li>
+           <li>
+            <div class="item-name">Charge</div>
+            <div class="item-desc">Combinações com chocolate, morango, amendoim, etc.</div>
+            <div class="item-price">30cm R$ 60 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Charge', 65, 75)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Banana Gemada</div>
+            <div class="item-desc">Mussarela, gemada, banana e canela</div>
+            <div class="item-price">30cm R$ 60 | 40cm R$ 75</div>
+            <button onclick="adicionarCarrinho('Pizza Banana Gemada', 65, 75)">Adicionar</button>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Vulcão Doce</h3>
+        <ul class="menu-list">
+          <li>
+            <div class="item-name">Vulcão Nutella</div>
+            <div class="item-desc">Borda recheada com Nutella e cobertura de Nutella e banana</div>
+            <div class="item-price">30cm R$ 75 | 40cm R$ 95</div>
+           <button onclick="adicionarCarrinho('Pizza Vulcão Nutella', 75, 95)">Adicionar</button>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Bordas Recheadas</h3>
+        <ul class="menu-list small">
+          <li><div class="item-name">Catupiry</div><div class="item-price">R$ 16,00</div><button onclick="adicionarCarrinho('Borda Catupiry', 16)">Adicionar</button></li>
+          <li><div class="item-name">Cheddar</div><div class="item-price">R$ 16,00</div><button onclick="adicionarCarrinho('Borda Cheddar', 16)">Adicionar</button></li>
+          <li><div class="item-name">Doce de Leite</div><div class="item-price">R$ 23,00</div><button onclick="adicionarCarrinho('Borda Doce de Leite', 23)">Adicionar</button></li>
+          <li><div class="item-name">Nutella</div><div class="item-price">R$ 23,00</div><button onclick="adicionarCarrinho('Borda Nutella', 23)">Adicionar</button></li>
+          <li><div class="item-name">Chocolate</div><div class="item-price">R$ 23,00</div><button onclick="adicionarCarrinho('Borda Chocolate', 23)">Adicionar</button></li>
+          <li><div class="item-name">Borda Mista (2 sabores)</div><div class="item-price">R$ 28,00</div><button onclick="adicionarCarrinho('Borda Mista (2 sabores)', 28)">Adicionar</button></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Monte Sua Pizza</h3>
+        <p class="muted">Molho de tomate e mussarela já inclusos. Escolha até 5 ingredientes.</p>
+        <ul class="menu-list small">
+          <li><div class="item-name">Opção Montada (30cm)</div><div class="item-price">R$ 85,00</div><button onclick="adicionarCarrinho('Opção Montada (30cm)', 85)">Adicionar</button></li>
+          <li><div class="item-name">Opção Montada (40cm)</div><div class="item-price">R$ 115,00</div><button onclick="adicionarCarrinho('Opção Montada (40cm)', 115)">Adicionar</button></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Adicionais</h3>
+        <ul class="menu-list small">
+          <li><div class="item-name">Bacon</div><div class="item-price">R$ 5,00</div><button onclick="adicionarCarrinho('Adicional Bacon', 5)">Adicionar</button></li>
+          <li><div class="item-name">Azeitonas</div><div class="item-price">R$ 4,00</div><button onclick="adicionarCarrinho('Adicional Azeitonas', 4)">Adicionar</button></li>
+          <li><div class="item-name">Ovo / Palmito / Milho</div><div class="item-price">R$ 4,00</div><button onclick="adicionarCarrinho('Adicional Ovo/Palmito/Milho', 4)">Adicionar</button></li>
+          <li><div class="item-name">Mussarela extra</div><div class="item-price">R$ 5,00</div><button onclick="adicionarCarrinho('Mussarela extra', 5)">Adicionar</button></li>
+          <li><div class="item-name">Presunto</div><div class="item-price">R$ 5,00</div><button onclick="adicionarCarrinho('Presunto', 5)">Adicionar</button></li>
+          <li><div class="item-name">Proteínas (Mignon / Alcatra / Costela)</div><div class="item-price">R$ 8,00 - R$ 15,00</div><button onclick="adicionarComPrecoPrompt('Proteína (especifique)')">Adicionar</button></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Lanches & Burgers</h3>
+        <ul class="menu-list">
+          <li>
+            <div class="item-name">Little Sheep</div>
+            <div class="item-desc">Pão brioche, hambúrguer, mussarela e alface</div>
+            <div class="item-price">R$ 19,90</div>
+            <button onclick="adicionarCarrinho('Little Sheep', 19.90)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Clássico da Casa</div>
+            <div class="item-desc">Pão brioche, molho da casa, hambúrguer 150g e alface</div>
+            <div class="item-price">R$ 29,90</div>
+            <button onclick="adicionarCarrinho('Clássico da Casa', 29.90)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Shape Burger</div>
+            <div class="item-desc">Pão brioche, frango na chapa, mussarela, tomate e pepino</div>
+            <div class="item-price">R$ 42,90</div>
+            <button onclick="adicionarCarrinho('Shape Burger', 42.90)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Bacon Lover</div>
+            <div class="item-desc">Hambúrguer 150g, mussarela, cebola caramelizada, bacon em dobro e cheddar</div>
+            <div class="item-price">R$ 44,90</div>
+            <button onclick="adicionarCarrinho('Bacon Lover', 44.90)">Adicionar</button>
+          </li>
+          <li>
+            <div class="item-name">Monster Sheep</div>
+            <div class="item-desc">Tripla carne 150g, tripla camada de bacon, picles e provolone</div>
+            <div class="item-price">R$ 59,90</div>
+            <button onclick="adicionarCarrinho('Monster Sheep', 59.90)">Adicionar</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-section">
+        <h3>Porções & Petiscos</h3>
+        <ul class="menu-list">
+          <li><div class="item-name">Batata Rústica</div><div class="item-desc">Com queijo</div><div class="item-price">R$ 28,90</div><button onclick="adicionarCarrinho('Batata Rústica', 28.90)">Adicionar</button></li>
+          <li><div class="item-name">Batata Rústica c/ Bacon</div><div class="item-desc">Com molho</div><div class="item-price">R$ 32,90</div><button onclick="adicionarCarrinho('Batata Rústica c/ Bacon', 32.90)">Adicionar</button></li>
+          <li><div class="item-name">Batata Canoa</div><div class="item-desc">Com queijo e bacon</div><div class="item-price">R$ 34,90</div><button onclick="adicionarCarrinho('Batata Canoa', 34.90)">Adicionar</button></li>
+          <li><div class="item-name">Camarão (porção)</div><div class="item-desc">Porções especiais</div><div class="item-price">R$ 49,90</div><button onclick="adicionarCarrinho('Porção Camarão', 49.90)">Adicionar</button></li>
+          <li><div class="item-name">Tilápia (porção)</div><div class="item-desc">Porções especiais</div><div class="item-price">R$ 39,90</div><button onclick="adicionarCarrinho('Porção Tilápia', 39.90)">Adicionar</button></li>
+          <li><div class="item-name">Bolinho de Bacalhau</div><div class="item-desc">Porção</div><div class="item-price">R$ 39,90</div><button onclick="adicionarCarrinho('Bolinho de Bacalhau (porção)', 39.90)">Adicionar</button></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Bebidas</h3>
+        <ul class="menu-list small">
+          <li><div class="item-name">Garrafa (exemplo)</div><div class="item-price">R$ 24,90</div><button onclick="adicionarCarrinho('Garrafa (bebida)', 24.90)">Adicionar</button></li>
+          <li><div class="item-name">Taça (exemplo)</div><div class="item-price">R$ 16,99</div><button onclick="adicionarCarrinho('Taça (bebida)', 16.99)">Adicionar</button></li>
+          <li><div class="item-name">Refrigerante / Suco</div><div class="item-price">R$ 14,99</div><button onclick="adicionarCarrinho('Refrigerante / Suco', 14.99)">Adicionar</button></li>
+          <li><div class="item-name">Cerveja</div><div class="item-price">R$ 19,99</div><button onclick="adicionarCarrinho('Cerveja', 19.99)">Adicionar</button></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mão na Massa Sheep Pub. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <div class="carrinho" id="carrinho">
+    <h3>Seu Carrinho</h3>
+    <ul id="lista-carrinho"></ul>
+    <p>Total: R$ <span id="total-carrinho">0,00</span></p>
+    <button onclick="enviarPedido()">Finalizar Pedido</button>
+    <button onclick="fecharCarrinho()" style="background-color:#555;margin-top:10px;">Fechar</button>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    function adicionarComPrecoPrompt(nome) {
+      let precoStr = prompt('Digite o preço para "' + nome + '" (ex: 65 ou 65,00):')
+      if (!precoStr) return;
+      precoStr = precoStr.replace(',', '.').replace(/[^\d.]/g, '')
+      const preco = parseFloat(precoStr)
+      if (isNaN(preco)) {
+        alert('Preço inválido. Tente novamente.')
+        return
+      }
+      adicionarCarrinho(nome, preco);
+      abrirCarrinho();
+    }
+  </script>
+</body>
+</html>
+
